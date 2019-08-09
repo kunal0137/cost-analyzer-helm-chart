@@ -100,11 +100,7 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 10
             failureThreshold: 200
-        {{- if .Values.kubecost }}
-        - image: {{ .Values.kubecost.image }}:prod-{{ $.Chart.AppVersion }}
-        {{- else }}
-        - image: ajaytripathy/kubecost:prod-{{ $.Chart.AppVersion }}
-        {{ end }}
+        - image: {{ .Values.kubecost.image }}:{{ .Values.kubecost.tag }}
           resources:
             requests:
               cpu: "100m"
