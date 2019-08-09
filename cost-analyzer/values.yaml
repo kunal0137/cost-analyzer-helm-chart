@@ -25,7 +25,8 @@ kubecostChecks:
   image: "ajaytripathy/kubecost-checks"
 
 kubecostFrontend:
-  image: "ajaytripathy/kubecost-frontend"
+  image: "kunal0137/kubecost-frontend"
+  #image: "ajaytripathy/kubecost-frontend"
   #limits:
   #  cpu: "100m"
   #  memory: "256Mi"
